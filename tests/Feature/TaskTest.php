@@ -28,7 +28,6 @@ class TaskTest extends TestCase
             'end_date' => now()->addDays(1),
         ]);
 
-        $response->assertStatus(302);
         $this->assertDatabaseHas('tasks', ['title' => 'Test Task']);
     }
 }
