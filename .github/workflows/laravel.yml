@@ -39,6 +39,9 @@ jobs:
     - name: Run Migrations
       run: php artisan migrate --database=sqlite
 
+    - name: Debug Database Schema
+      run: php artisan migrate:status
+
     # Stap 7: Voer de tests uit
     - name: Run TaskTest
       run: ./vendor/bin/phpunit tests/Feature/TaskTest.php
