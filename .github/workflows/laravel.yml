@@ -24,7 +24,7 @@ jobs:
     # Copy Environment file 
     - name: Set up environment file
       run: |
-        cp .env.example .env
+        cp .env.testing .env
         php artisan key:generate
 
     # Application Key genereren
