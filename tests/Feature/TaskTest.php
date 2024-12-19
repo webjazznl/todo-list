@@ -31,4 +31,15 @@ class TaskTest extends TestCase
         ]);
         $this->assertDatabaseHas('tasks', ['title' => 'Test Task']);
     }
+
+    public function testSendOverdueMail()
+    {
+
+        $response = $this->post('/tasks', [
+            'title' => 'Overdue Task',
+            'start_date' => now()->addDays(-2),
+            'end_date' => now()->addDays(-1),
+        ]);
+        $this->assertDatabaseHas('tasks', ['title' => 'Overdue Task']);
+    }
 }
