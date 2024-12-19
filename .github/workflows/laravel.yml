@@ -25,6 +25,7 @@ jobs:
     - name: Set up environment file
       run: |
         cp .env.testing .env
+        cat .env
         php artisan key:generate
 
     # Application Key genereren
