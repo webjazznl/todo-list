@@ -28,10 +28,6 @@ jobs:
         cat .env
         php artisan key:generate
 
-    # Application Key genereren
-    - name: Generate Application Key
-      run: php artisan key:generate
-
     # Cache configuratie
     - name: Cache Configuration
       run: php artisan config:cache
