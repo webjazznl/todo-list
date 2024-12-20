@@ -21,7 +21,7 @@ curl -sS https://getcomposer.org/installer | php
 ```
 sudo mv composer.phar /usr/local/bin/composer
 ```
-# 5. Controleer of Composer correct is geïnstalleerd
+5. Controleer of Composer correct is geïnstalleerd
 ```
 composer --version
 ```
