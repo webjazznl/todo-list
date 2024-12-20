@@ -48,7 +48,7 @@ Als mysql of een andere container niet start: docker-compose down --volumes
 
 Conditie: alle containers zijn gemaakt en draaien 
 
-10. Draai de databasemigraties ./vendor/bin/sail artisan migrate
+10. Draai de databasemigraties ./vendor/bin/sail artisan migrate en open http://localhost/
 
 11. Test het commando om mails te versturen voor verlopen taken 
 ```
@@ -58,4 +58,8 @@ Ga naar http://localhost:8025/ om de mails te bekijken.
 
 Stel een andere ontvanger in in de .env file: MAIL_RECIPIENT
 
+# Testen
+```
+./vendor/bin/sail artisan test
+```
 Zie .env.testing als lokaal testen niet werkt
