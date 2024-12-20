@@ -18,7 +18,7 @@ class TaskTest extends TestCase
     {
         $response = $this->get('/tasks/');
 
-        $response->assertStatus(300);
+        $response->assertStatus(200);
     }
 
     public function testTaskCanBeCreated()
