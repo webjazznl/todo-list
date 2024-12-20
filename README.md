@@ -66,6 +66,6 @@ Stel een andere ontvanger in in de .env file: MAIL_RECIPIENT
 
 # Testen
 ```
-./vendor/bin/sail artisan test
+./vendor/bin/sail artisan test tests/Feature/TaskTest.php 
 ```
 Zie .env.testing als lokaal testen niet werkt
