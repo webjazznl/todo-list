@@ -1,14 +1,14 @@
 # Todo-App
 Auteur: Henk Siebelink 
 # Installatie
-Docker Desktop installeren en de Ubuntu app van windows op WSL-2
+Vooraf: Docker Desktop installeren en de Ubuntu app van windows op WSL-2
 
 In je Ubuntu op WSL-2 machine:
 
 1. Update je pakketbron
 sudo apt update && sudo apt upgrade -y
 
-2. Installeer vereisten zoals curl, PHP en andere benodigde extensies
+2. Installeer vereisten zoals curl, PHP, composer en andere benodigde extensies
 ```
 sudo apt install curl php-cli php-mbstring unzip git php-xml php-dom php-curl -y
 ```
