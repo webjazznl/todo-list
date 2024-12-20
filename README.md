@@ -40,16 +40,22 @@ composer install
 ```
 cp .env.example .env 
 ```
-9. Maak docker containers
+9. Start docker containers
 ```
 ./vendor/bin/sail up -d
 ```
-Als mysql of een andere container niet start: docker-compose down --volumes
-
+TIP: Als mysql of een andere container niet start, de storage van containers verwijderen en containers herstarten: 
+```
+docker-compose down --volumes
+```
 Conditie: alle containers zijn gemaakt en draaien 
 
-10. Draai de databasemigraties ./vendor/bin/sail artisan migrate en open http://localhost/
+10. Draai de databasemigraties ./vendor/bin/sail artisan migrate en open daarna http://localhost/
 
+```
+./vendor/bin/sail artisan migrate
+
+```
 11. Test het commando om mails te versturen voor verlopen taken 
 ```
 ./vendor/bin/sail artisan app:send-overdue-task-emails
