@@ -34,7 +34,7 @@ class SendOverdueTaskEmails extends Command
             ->where('completed', false)
             ->get();
         foreach ($tasks as $task) {
-            Mail::to('example@example.com')->send(new TaskMail($task));
+            Mail::to(env('MAIL_RECIPIENT'))->send(new TaskMail($task));
             $this->info("Email sent for task: {$task->title}");
         }
 
