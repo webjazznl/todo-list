@@ -72,13 +72,10 @@ class TaskController extends Controller
     }
 
     //Taak markeren als gereed
-
     public function completed(Task $task)
     {
-
         $task->completed = true;
         $task->save();
         return redirect()->route('tasks.index')->with('success', 'Hoera! Deze taak is gereed: ' . $task->title  );
-
     }
 }
