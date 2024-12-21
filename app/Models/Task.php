@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Task extends Model
 {
     //Zorg dat alle velden gevuld mogen worden
-    protected $fillable = ['title','start_date','end_date','description'];
+    protected $fillable = ['title', 'start_date', 'end_date', 'description', 'completed'];
 }
